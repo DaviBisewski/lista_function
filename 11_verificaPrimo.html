@@ -5,11 +5,26 @@
     */
 
     //Entrada
+    let primo = Number(prompt(`Insira um número`).trim().replace(",", "."));
+    let primos = []
 
 
     //Processamento
+    function verificacao (primo){
+        for (let num2 = 2; num2 < primo; num2++) {
+        primos.push(primo % num2);
+    }
+    if (primos.includes(0) === false) {
+        alert(`É primo`)
+    }
+    else {
+        alert(`Não é um primo `)
+
+    }
+    }
 
 
     //Saída
+    verificacao(primo)
 
 </script>

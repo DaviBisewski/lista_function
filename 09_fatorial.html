@@ -5,11 +5,15 @@
     */
 
     //Entrada
-
+    let numero = Number(prompt(`Digite um número inteiro para fazer o fatorial:`).trim())
 
     //Processamento
-
-
+    function conta(numero) {
+        if(numero == 1) return 1;
+        else return numero * conta(numero - 1);
+    }
+    let result = conta(numero)
+    alert(`Fatorial: ${result}`)
     //Saída
 
 </script>
